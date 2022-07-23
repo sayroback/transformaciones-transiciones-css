@@ -30,6 +30,11 @@ export const NavLessons = () => {
         <li>
           <NavLink to="/lessons/6">Lesson 6: Backface visibility</NavLink>
         </li>
+        <li>
+          <NavLink to="/lessons/7">
+            Lesson 7: Efecto parallax: estructura HTML
+          </NavLink>
+        </li>
       </ol>
     </nav>
   );

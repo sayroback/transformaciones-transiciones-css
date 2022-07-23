@@ -36,8 +36,8 @@ const Lesson5 = () => {
               onChange={handleSubmit}
               type="range"
               name="deg"
-              min="-90"
-              max="90"
+              min="-10"
+              max="40"
               step="1"
               value={deg}
             />

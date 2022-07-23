@@ -10,6 +10,7 @@ import { Lesson3 } from "./pages/Lessons/Lesson3";
 import { Lesson4 } from "./pages/Lessons/Lesson4";
 import Lesson5 from "./pages/Lessons/Lesson5";
 import { Lesson6 } from "./pages/Lessons/Lesson6";
+import { Lesson7 } from "./pages/Lessons/Lesson7";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="4" element={<Lesson4 />} />
           <Route path="5" element={<Lesson5 />} />
           <Route path="6" element={<Lesson6 />} />
+          <Route path="7" element={<Lesson7 />} />
           <Route index element={<Lessons />} />
         </Route>
       </Routes>
