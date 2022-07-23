@@ -3,31 +3,31 @@
   &__exercise {
     @include exercise;
 
-    .container {
-      margin: 8px auto;
+    .card {
       width: 200px;
       height: 200px;
+      transform-style: preserve-3d;
       position: relative;
-      border: 5px solid burlywood;
-      perspective: 100px;
-      .item {
-        width: 200px;
-        height: 200px;
+      .face {
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
         position: absolute;
-        border: 3px solid burlywood;
-        background: papayawhip;
-        opacity: 0.5;
-        transform-style: preserve-3d;
+        backface-visibility: hidden;
       }
+      .front {
+        background: palegreen;
+      }
+      .back {
+        background: paleturquoise;
+        transform: rotateX(180deg);
+      }
+    }
+    .card:hover {
+      transform: rotateY(180deg);
     }
   }
   &__notes {
     @include note;
-    table {
-      margin: 8px auto;
-      tbody td {
-        border: 1px solid black;
-      }
-    }
   }
 }

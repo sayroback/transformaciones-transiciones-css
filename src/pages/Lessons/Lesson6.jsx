@@ -1,69 +1,44 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React from "react";
 import { LayoutLessons } from "./LayoutLessons";
-import { useRef } from "react";
-
-const Perspective = styled.div`
-  transform: rotateX(${(props) => props.deg}deg);
-  color: red;
-`;
 
 export const Lesson6 = () => {
-  const [deg, setDeg] = useState("20");
   const numLesson = 6;
-  const form = useRef(null);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const formData = new FormData(form.current);
-    const data = {
-      rango: formData.get("deg"),
-    };
-    setDeg(data.rango);
-  };
 
   return (
     <LayoutLessons>
       <div className={`lesson${numLesson}`}>
-        <h1>{`Lesson ${numLesson}:`} Transform style y perspective</h1>
+        <h1>{`Lesson ${numLesson}:`} Backface visibility</h1>
         <h2>Ejercicio</h2>
         <div className={`lesson${numLesson}__exercise`}>
-          <form action="" ref={form}>
-            <input
-              onChange={handleSubmit}
-              type="range"
-              name="deg"
-              min="-90"
-              max="90"
-              step="1"
-              value={deg}
-            />
-          </form>
-          <p>{`transform: rotateX(${deg}deg);`}</p>
-          <div className="container">
-            <Perspective deg={deg} className="item"></Perspective>
+          <div className="card">
+            <div className="face front"></div>
+            <div className="face back"></div>
           </div>
         </div>
         <div className={`lesson${numLesson}__notes`}>
           <h1>Notas</h1>
-          <h3>Transform-style</h3>
+          <h3>Backface-visibility</h3>
           <p>
-            La propiedad transform-style de CSS establece si un elemento hijo
-            está en el plano 2D (flat) o 3D (preserve-3d). Por defecto, el
-            elemento está con valor flat.
+            La propiedad backface-visibility de CSS permite mostrar la cara
+            posterior de un elemento. Esta propiedad recibe dos valores: visible
+            (visible) y hidden (oculto); por defecto, su valor es visible.
           </p>
-          <h3>Perspective</h3>
           <p>
-            Se utiliza para proveer de profundidad a un elemento con respecto al
-            usuario y dar la sensación de 3D. El valor que recibe la propiedad
-            es una longitud (px, rem, etc.) que representa la profundidad del
-            plano para construir la perspectiva.
+            La cara posterior de un elemento siempre tiene un fondo
+            transparente, por lo que al ser visible y realizar una
+            transformación en un solo eje, mostrará un efecto de imagen espejo.
+            Mira la siguiente imagen y observa cómo Alicia cambia de lugar.
           </p>
-          <h3>Cambiar el origen de la perspectiva. </h3>
+          <figure>
+            <img
+              src="https://cdn.document360.io/da52b302-22aa-4a71-9908-ba18e68ffee7/Images/Documentation/animationland10.PNG"
+              alt="Representación de la propiedad backfase-visibility"
+            />
+          </figure>
           <p>
-            La propiedad perspective-origin es la encargada de cambiar el origen
-            de la perspectiva, por lo que el usuario percibirá de diferente
-            forma el elemento.
+            En cambio, si el valor es hidden no mostrará contenido. Con esto
+            podemos realizar que un elemento se muestre al ocultarse otro, como
+            un efecto de voltear una carta.
           </p>
         </div>
       </div>

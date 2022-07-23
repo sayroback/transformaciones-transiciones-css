@@ -26,7 +26,10 @@ const Lesson5 = () => {
     <LayoutLessons>
       <div className={`lesson${numLesson}`}>
         <h1>{`Lesson ${numLesson}:`} Transform style y perspective</h1>
-        <h2>Ejercicio</h2>
+        <div style={{ display: "flex", alignItems: "baseline" }}>
+          <h2>Ejercicio</h2>
+          {/* <p style={{ margin: "0 4px" }}>(Tap o pasa el cursos para activar)</p> */}
+        </div>
         <div className={`lesson${numLesson}__exercise`}>
           <form action="" ref={form}>
             <input

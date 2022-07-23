@@ -2,7 +2,7 @@ $color-primario: #363030;
 $backExercise: #f3f3f3;
 
 @mixin lesson {
-  margin: 15px;
+  margin: 8px;
   h2 {
     margin-top: 12px;
   }
@@ -12,7 +12,15 @@ $backExercise: #f3f3f3;
 }
 
 @mixin note {
-  margin: 20px;
+  margin: 14px;
+  figure {
+    display: flex;
+    justify-content: center;
+    img {
+      margin: 12px 0;
+      min-width: 320px;
+    }
+  }
 }
 @mixin exercise {
   background-color: $backExercise;
@@ -28,6 +36,7 @@ body {
   color: $color-primario;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 0 8px;
   h1 {
     font-size: 22px;
   }
@@ -40,5 +49,14 @@ body {
   a,
   p {
     font-size: 14px;
+  }
+}
+.navbar {
+  display: flex;
+  justify-content: end;
+  margin-top: 12px;
+  a {
+    text-decoration: none;
+    margin: 0 12px;
   }
 }

@@ -7,7 +7,10 @@ export const Lesson3 = () => {
     <LayoutLessons>
       <div className={`lesson${numLesson}`}>
         <h1>{`Lesson ${numLesson}:`} Transform translate</h1>
-        <h2>Ejercicio</h2>
+        <div style={{ display: "flex", alignItems: "baseline" }}>
+          <h2>Ejercicio</h2>
+          <p style={{ margin: "0 4px" }}>(Tap o pasa el cursos para activar)</p>
+        </div>
         <div className={`lesson${numLesson}__exercise`}>
           <div className="shadow">
             <div className="circle"></div>
