@@ -1,12 +1,8 @@
-.lesson2 {
+.lesson3 {
   @include lesson;
   &__exercise {
     @include exercise;
-    div::before {
-      content: "♥ ";
-    }
-    div::after {
-      content: " →";
+    .shadow {
     }
   }
   &__notes {

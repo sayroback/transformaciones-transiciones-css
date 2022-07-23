@@ -14,6 +14,9 @@ export const NavLessons = () => {
         <li>
           <NavLink to="/lessons/2">Lesson 2: Pseudo-elementos </NavLink>
         </li>
+        <li>
+          <NavLink to="/lessons/3">Lesson 3: Transform translate</NavLink>
+        </li>
       </ol>
     </nav>
   );

@@ -1,13 +1,7 @@
 .lesson1 {
-  margin: 15px;
-  h2 {
-    margin-top: 12px;
-  }
-  h3 {
-    margin-top: 8px;
-  }
+  @include lesson;
   &__exercise {
-    background-color: #f3f3f3;
+    @include exercise;
     a:link {
       color: red;
     }
@@ -28,7 +22,6 @@
     }
   }
   &__notes {
-    color: #3e3e53;
-    margin: 20px;
+    @include note;
   }
 }

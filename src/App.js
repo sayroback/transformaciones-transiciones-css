@@ -6,6 +6,7 @@ import { Home } from "./pages/Home";
 import { Lessons } from "./pages/Lessons";
 import { Lesson1 } from "./pages/Lessons/Lesson1";
 import { Lesson2 } from "./pages/Lessons/Lesson2";
+import { Lesson3 } from "./pages/Lessons/Lesson3";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="lessons">
           <Route path="1" element={<Lesson1 />} />
           <Route path="2" element={<Lesson2 />} />
+          <Route path="3" element={<Lesson3 />} />
           <Route index element={<Lessons />} />
         </Route>
       </Routes>
