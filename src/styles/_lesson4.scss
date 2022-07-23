@@ -2,6 +2,8 @@
   @include lesson;
   &__exercise {
     @include exercise;
+    display: flex;
+    flex-wrap: wrap;
     .skew {
       background: lightgray;
       width: 200px;

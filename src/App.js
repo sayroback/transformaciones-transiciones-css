@@ -8,6 +8,8 @@ import { Lesson1 } from "./pages/Lessons/Lesson1";
 import { Lesson2 } from "./pages/Lessons/Lesson2";
 import { Lesson3 } from "./pages/Lessons/Lesson3";
 import { Lesson4 } from "./pages/Lessons/Lesson4";
+import Lesson5 from "./pages/Lessons/Lesson5";
+import { Lesson6 } from "./pages/Lessons/Lesson6";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="2" element={<Lesson2 />} />
           <Route path="3" element={<Lesson3 />} />
           <Route path="4" element={<Lesson4 />} />
+          <Route path="5" element={<Lesson5 />} />
+          <Route path="6" element={<Lesson6 />} />
           <Route index element={<Lessons />} />
         </Route>
       </Routes>

@@ -1,0 +1,33 @@
+.lesson6 {
+  @include lesson;
+  &__exercise {
+    @include exercise;
+
+    .container {
+      margin: 8px auto;
+      width: 200px;
+      height: 200px;
+      position: relative;
+      border: 5px solid burlywood;
+      perspective: 100px;
+      .item {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        border: 3px solid burlywood;
+        background: papayawhip;
+        opacity: 0.5;
+        transform-style: preserve-3d;
+      }
+    }
+  }
+  &__notes {
+    @include note;
+    table {
+      margin: 8px auto;
+      tbody td {
+        border: 1px solid black;
+      }
+    }
+  }
+}

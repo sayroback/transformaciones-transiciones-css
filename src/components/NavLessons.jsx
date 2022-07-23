@@ -19,8 +19,16 @@ export const NavLessons = () => {
         </li>
         <li>
           <NavLink to="/lessons/4">
-            Lesson 4: Transform rotate, scale, skew y matrix
+            Lesson 4: Transform rotate, scale, skew, Transform origin y matrix
           </NavLink>
+        </li>
+        <li>
+          <NavLink to="/lessons/5">
+            Lesson 5: Transform style y perspective
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/lessons/6">Lesson 6: Backface visibility</NavLink>
         </li>
       </ol>
     </nav>
