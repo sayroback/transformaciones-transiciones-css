@@ -6,7 +6,7 @@ export const Lesson3 = () => {
   return (
     <LayoutLessons>
       <div className={`lesson${numLesson}`}>
-        <h1>L{`Lesson ${numLesson}:`} Transform translate</h1>
+        <h1>{`Lesson ${numLesson}:`} Transform translate</h1>
         <h2>Ejercicio</h2>
         <div className={`lesson${numLesson}__exercise`}>
           <div className="shadow">

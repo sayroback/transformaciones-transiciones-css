@@ -17,6 +17,11 @@ export const NavLessons = () => {
         <li>
           <NavLink to="/lessons/3">Lesson 3: Transform translate</NavLink>
         </li>
+        <li>
+          <NavLink to="/lessons/4">
+            Lesson 4: Transform rotate, scale, skew y matrix
+          </NavLink>
+        </li>
       </ol>
     </nav>
   );
