@@ -1,0 +1,34 @@
+.lesson1 {
+  margin: 15px;
+  h2 {
+    margin-top: 12px;
+  }
+  h3 {
+    margin-top: 8px;
+  }
+  &__exercise {
+    background-color: #f3f3f3;
+    a:link {
+      color: red;
+    }
+    a:visited {
+      color: rgb(48, 204, 108);
+    }
+    a:hover {
+      background-color: #3e3e53;
+    }
+    a {
+      margin-right: 8px;
+    }
+    p:not(.not) {
+      color: lightpink;
+    }
+    .container div:nth-child(1) {
+      font-size: 24px;
+    }
+  }
+  &__notes {
+    color: #3e3e53;
+    margin: 20px;
+  }
+}

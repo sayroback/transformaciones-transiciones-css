@@ -1,13 +1,14 @@
 import React from "react";
 import { LayoutLessons } from "./LayoutLessons";
 
-export const Lessons1 = () => {
+export const Lesson2 = () => {
+  const numLesson = 2;
   return (
     <LayoutLessons>
-      <div className="lessons">
-        <h1>Lessons 1: Pseudo-clases y pseudo-elementos en las animaciones</h1>
+      <div className={`lesson${numLesson}`}>
+        <h1>L{`Lesson ${numLesson}:`} Pseudo-elementos</h1>
         <h2>Ejercicio</h2>
-        <div className="lessons__exercise">
+        <div className={`lesson${numLesson}__exercise`}>
           <a href="/">Sayroback</a>
           <a href="/hola">Sayroback</a>
           <p className="yes">Si</p>
@@ -18,17 +19,15 @@ export const Lessons1 = () => {
             <div>3</div>
           </div>
         </div>
-        <div className="lessons__notes">
+        <div className={`lesson${numLesson}__notes`}>
           <h1>Notas</h1>
           <h3>:link</h3>
           <p>
-            Es una pseudo clase que selecciona aquellos enlaces que{" "}
-            <b>aun no han</b> sido visitados.
+            Selecciona aquellos enlaces que <b>aun no han</b> sido visitados.
           </p>
           <h3>:visited</h3>
           <p>
-            Es una pseudo clase que selecciona aquellos enlaces que <b>ya</b>{" "}
-            han sido visitados.
+            Selecciona aquellos enlaces que <b>ya</b> han sido visitados.
           </p>
           <h3>:hover</h3>
           <p>
