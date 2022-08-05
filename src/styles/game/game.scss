@@ -1,0 +1,15 @@
+.game {
+  counter-reset: game;
+  input:checked {
+    counter-increment: game;
+  }
+  .total-count::after {
+    content: counter(game);
+  }
+  .phone {
+    position: relative;
+    .layer-1 {
+      position: absolute;
+    }
+  }
+}
