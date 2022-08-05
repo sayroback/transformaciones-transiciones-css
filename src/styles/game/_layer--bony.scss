@@ -1,0 +1,9 @@
+@mixin layer--bony($index, $height) {
+  position: absolute;
+  z-index: $index;
+  height: $height;
+  width: 70px;
+  background: rgba(255, 255, 255, 0.5);
+  @include ear--left;
+  @include ear--right;
+}

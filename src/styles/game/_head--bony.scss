@@ -1,0 +1,24 @@
+@mixin head--bony {
+  .head {
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 50%;
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    &__eye {
+      background: gray;
+      border-radius: 50%;
+      width: 4px;
+      height: 4px;
+      position: relative;
+      top: 15px;
+    }
+  }
+}

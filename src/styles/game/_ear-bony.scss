@@ -1,0 +1,35 @@
+@mixin ear($color, $width) {
+  background: $color;
+  border-radius: 90%;
+  width: $width;
+  height: 50px;
+  position: absolute;
+}
+@mixin ear--outer {
+  @include ear(white, 20px);
+}
+@mixin ear--inner {
+  @include ear(pink, 10px);
+}
+@mixin ear--left {
+  .left-ear--outer {
+    @include ear--outer;
+    left: 10px;
+  }
+  .left-ear--inner {
+    @include ear--inner;
+    left: 15px;
+    top: 10px;
+  }
+}
+@mixin ear--right {
+  .right-ear--outer {
+    @include ear--outer;
+    right: 10px;
+  }
+  .right-ear--inner {
+    @include ear--inner;
+    right: 15px;
+    top: 8px;
+  }
+}
