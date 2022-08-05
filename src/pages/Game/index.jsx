@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles/game/game.scss";
-import { Bony } from "./Bony";
+import { Bonny } from "./Bonny";
 import { Counter } from "./Counter";
 import { Wall } from "./Wall";
 
@@ -9,22 +9,22 @@ export const Game = () => {
     <div className="game">
       <div className="phone">
         <div className="layer-1">
-          <Bony />
+          <Bonny />
         </div>
         <div className="layer-2">
-          <Bony />
+          <Bonny />
         </div>
         <div className="layer-3">
           <Wall />
         </div>
         <div className="layer-4">
-          <Bony />
+          <Bonny />
         </div>
         <div className="layer-5">
           <Wall />
         </div>
         <div className="layer-6">
-          <Bony />
+          <Bonny />
         </div>
         <div className="layer-7">
           <Wall />

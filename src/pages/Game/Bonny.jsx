@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Bony = () => {
+export const Bonny = () => {
   return (
     <>
       <div className="left-ear--outer"></div>

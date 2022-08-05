@@ -1,6 +1,6 @@
-@import "./head--bony.scss";
-@import "./layer--bony.scss";
-@import "./ear-bony.scss";
+@import "./head--bonny.scss";
+@import "./layer--bonny.scss";
+@import "./ear-bonny.scss";
 @import "./wall.scss";
 $pasto: #506d2f;
 $tierra: #7d5642;
@@ -29,22 +29,22 @@ $sombra: #2a2922;
     background: #c0ebff;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
     .layer-1 {
-      //Bony
-      @include layer--bony(1, 450px);
+      //Bonny
+      @include layer--bonny(1, 450px);
       @include ear--left;
       @include ear--right;
       bottom: 0;
       right: 60px;
-      @include head--bony;
+      @include head--bonny;
     }
     .layer-2 {
-      //Bony
-      @include layer--bony(2, 450px);
+      //Bonny
+      @include layer--bonny(2, 450px);
       @include ear--left;
       @include ear--right;
       bottom: 0;
       left: 60px;
-      @include head--bony;
+      @include head--bonny;
     }
     .layer-3 {
       //wall
@@ -58,13 +58,13 @@ $sombra: #2a2922;
       bottom: 0;
     }
     .layer-4 {
-      //Bony
-      @include layer--bony(4, 350px);
+      //Bonny
+      @include layer--bonny(4, 350px);
       @include ear--left;
       @include ear--right;
       bottom: 0;
       left: 15px;
-      @include head--bony;
+      @include head--bonny;
     }
     .layer-5 {
       //wall
@@ -77,13 +77,13 @@ $sombra: #2a2922;
       bottom: 0;
     }
     .layer-6 {
-      //Bony
-      @include layer--bony(6, 250px);
+      //Bonny
+      @include layer--bonny(6, 250px);
       @include ear--left;
       @include ear--right;
       bottom: 0;
       right: 25px;
-      @include head--bony;
+      @include head--bonny;
     }
     .layer-7 {
       //wall
