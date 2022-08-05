@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles/project.scss";
+import "./styles/lessons/lessons.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import { Home } from "./pages/Home";
@@ -11,6 +11,7 @@ import { Lesson4 } from "./pages/Lessons/Lesson4";
 import Lesson5 from "./pages/Lessons/Lesson5";
 import { Lesson6 } from "./pages/Lessons/Lesson6";
 import { Lesson7 } from "./pages/Lessons/Lesson7";
+import { Game } from "./pages/Game";
 
 function App() {
   return (
@@ -27,6 +28,10 @@ function App() {
           <Route path="6" element={<Lesson6 />} />
           <Route path="7" element={<Lesson7 />} />
           <Route index element={<Lessons />} />
+        </Route>
+        <Route path="game">
+          {/* <Route path="1" element={<Lesson1 />} /> */}
+          <Route index element={<Game />} />
         </Route>
       </Routes>
     </BrowserRouter>
