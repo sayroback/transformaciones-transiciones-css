@@ -1,3 +1,47 @@
+@mixin ear($color, $width) {
+  background: $color;
+  border-radius: 90%;
+  width: 10px;
+  height: 50px;
+  position: absolute;
+}
+@mixin ear--outer {
+  @include ear(white, 20px);
+  left: 10px;
+}
+@mixin ear--inner {
+  @include ear(pink, 10px);
+  left: 10px;
+  top: 8px;
+}
+@mixin ear--left {
+  .left-ear--outer {
+    @include ear--outer;
+  }
+  .left-ear--inner {
+    @include ear--inner;
+  }
+}
+@mixin ear--right {
+  .right-ear--outer {
+    @include ear--outer;
+    left: 40px;
+  }
+  .right-ear--inner {
+    @include ear--inner;
+    left: 40px;
+  }
+}
+@mixin layer--bony($index, $height) {
+  position: absolute;
+  z-index: $index;
+  height: $height;
+  width: 70px;
+  background: rgba(255, 255, 255, 0.5);
+  @include ear--left;
+  @include ear--right;
+}
+
 .game {
   margin: 0;
   height: 100vh;
@@ -20,20 +64,18 @@
     background: #ccefff;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
     .layer-1 {
-      position: absolute;
-      z-index: 1;
-      height: 450px;
-      width: 70px;
-      background: white;
+      //Bony
+      @include layer--bony(1, 450px);
+      @include ear--left;
+      @include ear--right;
       bottom: 0;
       right: 60px;
     }
     .layer-2 {
-      position: absolute;
-      z-index: 2;
-      height: 450px;
-      width: 70px;
-      background: white;
+      //Bony
+      @include layer--bony(2, 450px);
+      @include ear--left;
+      @include ear--right;
       bottom: 0;
       left: 60px;
     }
@@ -49,11 +91,10 @@
       bottom: 0;
     }
     .layer-4 {
-      position: absolute;
-      z-index: 4;
-      height: 350px;
-      width: 70px;
-      background: white;
+      //Bony
+      @include layer--bony(4, 350px);
+      @include ear--left;
+      @include ear--right;
       bottom: 0;
       left: 15px;
     }
@@ -68,11 +109,10 @@
       bottom: 0;
     }
     .layer-6 {
-      position: absolute;
-      z-index: 6;
-      height: 250px;
-      width: 70px;
-      background: white;
+      //Bony
+      @include layer--bony(6, 250px);
+      @include ear--left;
+      @include ear--right;
       bottom: 0;
       right: 25px;
     }
