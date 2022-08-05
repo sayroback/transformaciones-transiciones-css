@@ -1,6 +1,11 @@
 @import "./head--bony.scss";
 @import "./layer--bony.scss";
 @import "./ear-bony.scss";
+@import "./wall.scss";
+$pasto: #506d2f;
+$tierra: #7d5642;
+$tierra2: #684432;
+$sombra: #2a2922;
 
 .game {
   margin: 0;
@@ -21,7 +26,7 @@
     border-radius: 40px;
     height: 600px;
     width: 300px;
-    background: #ccefff;
+    background: #c0ebff;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
     .layer-1 {
       //Bony
@@ -42,14 +47,14 @@
       @include head--bony;
     }
     .layer-3 {
-      position: absolute;
+      //wall
+      @include wall;
       z-index: 3;
       left: 0;
       right: 0;
       margin: 0 auto;
       width: 220px;
       height: 400px;
-      background: palevioletred;
       bottom: 0;
     }
     .layer-4 {
@@ -62,13 +67,13 @@
       @include head--bony;
     }
     .layer-5 {
-      position: absolute;
+      //wall
+      @include wall;
       z-index: 5;
       left: 0;
       right: 0;
       width: 220px;
       height: 300px;
-      background: wheat;
       bottom: 0;
     }
     .layer-6 {
@@ -81,12 +86,12 @@
       @include head--bony;
     }
     .layer-7 {
-      position: absolute;
+      //wall
+      @include wall;
       z-index: 7;
       right: 0;
       width: 180px;
       height: 200px;
-      background: palevioletred;
       bottom: 0;
     }
     .layer-8 {

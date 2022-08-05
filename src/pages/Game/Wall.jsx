@@ -1,5 +1,9 @@
 import React from "react";
 
 export const Wall = () => {
-  return <div>Wall</div>;
+  return (
+    <div className="shadow">
+      <div className="grass"></div>
+    </div>
+  );
 };

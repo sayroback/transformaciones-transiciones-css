@@ -1,0 +1,42 @@
+@mixin wall {
+  position: absolute;
+  border-radius: 30px;
+  // background-color: #7d5642;
+  // background: linear-gradient(135deg, #68443255 25%, transparent 25%) -10px 0/
+  //     20px 20px,
+  //   linear-gradient(225deg, #684432 25%, transparent 25%) -10px 0/ 20px 20px,
+  //   linear-gradient(315deg, #68443255 25%, transparent 25%) 0px 0/ 20px 20px,
+  //   linear-gradient(45deg, #684432 25%, #7d5642 25%) 0px 0/ 20px 20px;
+  background: linear-gradient(27deg, $tierra 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, $tierra 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, $tierra2 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, $tierra2 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, $tierra 10px, transparent 10px),
+    linear-gradient(
+      $tierra 25%,
+      $tierra 25%,
+      $tierra2 50%,
+      transparent 50%,
+      transparent 75%,
+      $tierra2 75%,
+      $tierra
+    );
+  background-color: $tierra;
+  background-size: 20px 20px;
+  .shadow {
+    border-radius: 30px;
+    height: 100%;
+    background: linear-gradient(135deg, $sombra 25%, transparent 25%) -51px 0,
+      linear-gradient(-135deg, $sombra 25%, transparent 25%) -50px 0;
+    background-size: 32px 150px;
+    background-repeat: repeat-x;
+    .grass {
+      border-radius: 30px;
+      height: 100%;
+      background: linear-gradient(135deg, $pasto 25%, transparent 25%) -51px 0,
+        linear-gradient(-135deg, $pasto 25%, transparent 25%) -50px 0;
+      background-size: 32px 92px;
+      background-repeat: repeat-x;
+    }
+  }
+}
