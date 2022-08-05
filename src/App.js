@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles/lessons/lessons.scss";
+import "./styles/Days/Days.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import { Home } from "./pages/Home";

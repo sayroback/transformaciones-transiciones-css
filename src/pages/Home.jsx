@@ -1,5 +1,5 @@
 import React from "react";
-import { Day1 } from "./Days/Day1";
+import { Days } from "./Days";
 
 export const Home = () => {
   return (
@@ -7,7 +7,7 @@ export const Home = () => {
       <h1>
         100 DAYS CSS CHALLENGE <br />
       </h1>
-      <Day1 />
+      <Days />
     </div>
   );
 };
