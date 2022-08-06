@@ -3,6 +3,7 @@ import "../../styles/game/game.scss";
 import { Bonny } from "./Bonny";
 import { Cloud } from "./Cloud";
 import { Counter } from "./Counter";
+import { Tree } from "./Tree";
 import { Wall } from "./Wall";
 
 export const Game = () => {
@@ -33,7 +34,9 @@ export const Game = () => {
         <div className="layer-8">
           <Cloud />
         </div>
-        <div className="layer-9"></div>
+        <div className="layer-9">
+          <Tree />
+        </div>
         <div className="layer-10">
           <Cloud />
         </div>

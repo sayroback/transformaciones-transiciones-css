@@ -8,6 +8,7 @@ $sombra: #a54a38;
 @import "./ear-bonny.scss";
 @import "./wall.scss";
 @import "./cloud.scss";
+@import "./tree.scss";
 
 .game {
   margin: 0;
@@ -111,9 +112,8 @@ $sombra: #a54a38;
       //Tree
       position: absolute;
       z-index: 8;
-      height: 100px;
-      width: 100px;
-      background: gray;
+      height: 120px;
+      width: 240px;
       left: 0;
       right: 0;
       bottom: 0;

@@ -1,0 +1,26 @@
+@mixin tree {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100%;
+}
+@mixin tree--side {
+  background-color: $pasto;
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  top: 25px;
+}
+.tree {
+  @include tree;
+  &__left {
+    @include tree--side;
+    left: 10px;
+  }
+  &__center {
+    background-color: $pasto;
+    border-radius: 40px 40px 0 0;
+  }
+  &__right {
+    @include tree--side;
+    right: 10px;
+  }
+}
