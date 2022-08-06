@@ -44,20 +44,20 @@ export const Game = () => {
   const [speed, setSpeed] = React.useState(2.5);
 
   const handleClick = () => {
-    if (score >= 35) {
+    if (score >= 40) {
       let newScore = score + 1;
       setScore(newScore);
       console.log(speed);
     } else if (score >= 20) {
       let newScore = score + 1;
       setScore(newScore);
-      let newSpeed = -0.07 * newScore + 2.5;
+      let newSpeed = -0.07 * newScore + 2.8;
       setSpeed(newSpeed);
       console.log(speed);
     } else {
       let newScore = score + 1;
       setScore(newScore);
-      let newSpeed = -0.075 * newScore + 2.5;
+      let newSpeed = -0.075 * newScore + 2.8;
       setSpeed(newSpeed);
       console.log(speed);
     }
