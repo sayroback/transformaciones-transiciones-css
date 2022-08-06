@@ -44,7 +44,7 @@ export const Game = () => {
     <div className="game">
       <div className="phone">
         <div className="Title">
-          <h1>Hit a rabbit</h1>
+          <h1>Take a rabbit</h1>
           <h3 className="score">Score: {score}</h3>
         </div>
         {bonnys.map((bonny) => (

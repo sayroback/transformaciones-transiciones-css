@@ -35,3 +35,24 @@ $sombra: #a54a38;
     }
   }
 }
+@media screen and (max-width: 1440px) {
+  .game {
+    .phone {
+      transform: scale(1.3);
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .game {
+    .phone {
+      transform: scale(1.2);
+    }
+  }
+}
+@media screen and (max-width: 414px) {
+  .game {
+    .phone {
+      transform: scale(1.1);
+    }
+  }
+}
