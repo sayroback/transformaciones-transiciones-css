@@ -1,11 +1,13 @@
-@import "./head--bonny.scss";
-@import "./layer--bonny.scss";
-@import "./ear-bonny.scss";
-@import "./wall.scss";
 $pasto: #51af5e;
 $tierra: #bf624c;
 $tierra2: #684432;
 $sombra: #a54a38;
+
+@import "./head--bonny.scss";
+@import "./layer--bonny.scss";
+@import "./ear-bonny.scss";
+@import "./wall.scss";
+@import "./cloud.scss";
 
 .game {
   margin: 0;
@@ -27,6 +29,7 @@ $sombra: #a54a38;
     height: 600px;
     width: 300px;
     background: #c0ebff;
+    overflow: hidden;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
     .layer-1 {
       //Bonny
@@ -47,7 +50,7 @@ $sombra: #a54a38;
       @include head--bonny;
     }
     .layer-3 {
-      //wall
+      //Wall
       @include wall;
       z-index: 3;
       left: 0;
@@ -67,7 +70,7 @@ $sombra: #a54a38;
       @include head--bonny;
     }
     .layer-5 {
-      //wall
+      //Wall
       @include wall;
       z-index: 5;
       left: 0;
@@ -86,7 +89,7 @@ $sombra: #a54a38;
       @include head--bonny;
     }
     .layer-7 {
-      //wall
+      //Wall
       @include wall;
       z-index: 7;
       right: 0;
@@ -95,19 +98,19 @@ $sombra: #a54a38;
       bottom: 0;
     }
     .layer-8 {
-      //cloud
-      position: absolute;
-      z-index: 8;
-      height: 100px;
-      width: 100px;
-      background: white;
-      bottom: 0;
-      left: 0;
-    }
-    .layer-9 {
-      //tree
+      //Cloud
       position: absolute;
       z-index: 9;
+      bottom: 0;
+      left: 0;
+      .cloud {
+        @include cloud;
+      }
+    }
+    .layer-9 {
+      //Tree
+      position: absolute;
+      z-index: 8;
       height: 100px;
       width: 100px;
       background: gray;
@@ -117,16 +120,18 @@ $sombra: #a54a38;
       margin: 0 auto;
     }
     .layer-10 {
-      //cloud
+      //Cloud
       position: absolute;
       z-index: 10;
-      position: absolute;
-      z-index: 8;
-      height: 100px;
-      width: 100px;
-      background: white;
       bottom: 0;
       right: 0;
+      .cloud {
+        @include cloud;
+        flex-direction: row-reverse;
+        &--right {
+          border-radius: 40px 0 0 30px;
+        }
+      }
     }
   }
 }

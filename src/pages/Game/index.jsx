@@ -1,6 +1,7 @@
 import React from "react";
 import "../../styles/game/game.scss";
 import { Bonny } from "./Bonny";
+import { Cloud } from "./Cloud";
 import { Counter } from "./Counter";
 import { Wall } from "./Wall";
 
@@ -29,9 +30,13 @@ export const Game = () => {
         <div className="layer-7">
           <Wall />
         </div>
-        <div className="layer-8"></div>
+        <div className="layer-8">
+          <Cloud />
+        </div>
         <div className="layer-9"></div>
-        <div className="layer-10"></div>
+        <div className="layer-10">
+          <Cloud />
+        </div>
       </div>
       <Counter />
     </div>
