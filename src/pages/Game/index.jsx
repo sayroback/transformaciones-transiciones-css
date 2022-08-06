@@ -8,15 +8,29 @@ import { Wall } from "./Wall";
 
 const Layer = styled.div`
   animation-name: layer;
-  animation-duration: ${(props) => props.speed}s;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease;
   animation-iteration-count: infinite;
-
+  &.layer-1 {
+    animation-duration: ${(props) => Math.random() + props.speed}s;
+    animation-delay: ${(props) => Math.random() * 2}s;
+  }
+  &.layer-2 {
+    animation-duration: ${(props) => Math.random() + props.speed}s;
+    animation-delay: ${(props) => Math.random() * 2}s;
+  }
+  &.layer-4 {
+    animation-duration: ${(props) => Math.random() + props.speed}s;
+    animation-delay: ${(props) => Math.random() * 2}s;
+  }
+  &.layer-6 {
+    animation-duration: ${(props) => Math.random() + props.speed}s;
+    animation-delay: ${(props) => Math.random() * 2}s;
+  }
   @keyframes layer {
     0% {
       bottom: 0;
     }
-    25% {
+    50% {
       bottom: -80px;
     }
     100% {
@@ -27,16 +41,27 @@ const Layer = styled.div`
 
 export const Game = () => {
   const [score, setScore] = React.useState(0);
-  const [speed, setSpeed] = React.useState(3.5);
+  const [speed, setSpeed] = React.useState(2.5);
 
   const handleClick = () => {
-    let newScore = score + 1;
-    setScore(newScore);
-    let newSpeed = -0.075 * newScore + 3.5;
-    setSpeed(newSpeed);
+    if (score >= 35) {
+      let newScore = score + 1;
+      setScore(newScore);
+      console.log(speed);
+    } else if (score >= 20) {
+      let newScore = score + 1;
+      setScore(newScore);
+      let newSpeed = -0.07 * newScore + 2.5;
+      setSpeed(newSpeed);
+      console.log(speed);
+    } else {
+      let newScore = score + 1;
+      setScore(newScore);
+      let newSpeed = -0.075 * newScore + 2.5;
+      setSpeed(newSpeed);
+      console.log(speed);
+    }
   };
-  console.log(speed);
-  console.log(score);
 
   const bonnys = [1, 2, 4, 6];
 
@@ -49,6 +74,7 @@ export const Game = () => {
         </div>
         {bonnys.map((bonny) => (
           <Layer
+            key={bonny}
             speed={speed}
             className={`layer-${bonny}`}
             onClick={handleClick}
