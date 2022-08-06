@@ -1,6 +1,7 @@
 @mixin layer--bonny($index, $height) {
   position: absolute;
   z-index: $index;
+  bottom: 0;
   height: $height;
   width: 70px;
   background: rgba(255, 255, 255, 0);

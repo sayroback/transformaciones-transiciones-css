@@ -14,6 +14,7 @@
 @mixin ear--left {
   .left-ear--outer {
     @include ear--outer;
+    top: 0px;
     left: 10px;
   }
   .left-ear--inner {
@@ -25,6 +26,7 @@
 @mixin ear--right {
   .right-ear--outer {
     @include ear--outer;
+    top: 0px;
     right: 10px;
   }
   .right-ear--inner {

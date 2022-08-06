@@ -19,13 +19,6 @@ $sombra: #a54a38;
   width: 100%;
   display: grid;
   place-items: center;
-  counter-reset: game;
-  input:checked {
-    counter-increment: game;
-  }
-  .total-count::after {
-    content: counter(game);
-  }
   .phone {
     position: relative;
     border: 8px solid black;
@@ -35,5 +28,10 @@ $sombra: #a54a38;
     background: #c0ebff;
     overflow: hidden;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    .Title {
+      display: grid;
+      place-items: center;
+      margin-top: 30px;
+    }
   }
 }
