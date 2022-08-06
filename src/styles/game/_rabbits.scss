@@ -1,0 +1,36 @@
+.layer-1 {
+  //Bonny
+  @include layer--bonny(1, 450px);
+  @include ear--left;
+  @include ear--right;
+  bottom: 0;
+  right: 60px;
+  @include head--bonny;
+}
+.layer-2 {
+  //Bonny
+  @include layer--bonny(2, 450px);
+  @include ear--left;
+  @include ear--right;
+  bottom: 0;
+  left: 60px;
+  @include head--bonny;
+}
+.layer-4 {
+  //Bonny
+  @include layer--bonny(4, 350px);
+  @include ear--left;
+  @include ear--right;
+  bottom: 0;
+  left: 15px;
+  @include head--bonny;
+}
+.layer-6 {
+  //Bonny
+  @include layer--bonny(6, 250px);
+  @include ear--left;
+  @include ear--right;
+  bottom: 0;
+  right: 25px;
+  @include head--bonny;
+}
